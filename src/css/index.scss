@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  @apply transition-all duration-200;
+  @apply font-main;
+}
+
+.container {
+  @apply py-4 px-3 mx-auto max-w-full md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-[1440px] 4k:max-w-screen-4k;
+}
+
+a,
+button {
+  @apply focus:outline-purple-500 dark:focus:outline-purple-300;
+}
+
+hr {
+  @apply lg:hidden border-none bg-gray-200 h-thin dark:bg-purple-300;
+}
+
+svg {
+  @apply inline w-[18px] h-[18px] dark:stroke-purple-300;
+}
+
+body.active-menu { 
+  @apply overflow-y-hidden;
+}
+
+.header__menu {
+  @apply fixed md:static bg-white dark:bg-stone-900 shadow-xl md:shadow-none h-full w-1/2 top-20 -right-1/2 z-30 md:w-3/5 lg:w-1/2 xl:w-2/5;
+
+  &.header__menu-active {
+    @apply right-0;
+  }
+}
+
+.header__link {
+  @apply text-gray-600 border-b-2 border-transparent hover:border-b-purple-700 hover:text-purple-700 hover:tracking-wide dark:text-slate-200 dark:hover:text-purple-300 dark:hover:border-b-purple-300;
+}
+
+.banner {
+  @apply inline-block rounded-md h-60 relative overflow-hidden;
+
+  .banner__text {
+    @apply text-3xl text-white font-bold leading-snug tracking-wide;
+  }
+}
+
+.pagination-item {
+  @apply cursor-pointer inline-block text-gray-500 border-thin border-gray-400 dark:border-slate-200 px-3 py-1 text-center hover:bg-gray-100 dark:hover:bg-stone-700 dark:hover:text-white;
+
+  &:not(:first-of-type) {
+    @apply border-l-0;
+  }
+
+  &.pagination-item__selected {
+    @apply bg-gray-400 dark:bg-stone-700 text-white font-bold;
+  }
+}
+
+.article {
+  @apply flex items-center gap-3 flex-col md:flex-row my-2 py-2 px-1 rounded-2xl hover:shadow-md dark:hover:shadow-sm dark:hover:shadow-purple-300;
+}
+
+footer.footer {
+  @apply w-full border-t-gray-300 border-t-thin dark:border-t-purple-300;
+
+  .footer__container {
+    @apply flex flex-col md:flex-row gap-2 items-center justify-center text-center md:text-left md:items-start md:w-3/4 md:gap-0;
+  }
+
+  .footer__heading {
+    @apply font-semibold text-lg mb-3 dark:text-white;
+  }
+
+  .footer__link {
+    @apply inline-block my-1 text-gray-500 border-b-2 border-transparent hover:border-b-purple-500 hover:tracking-wide dark:text-slate-200 dark:hover:border-b-purple-300;
+  }
+
+  svg {
+    @apply w-5 h-5 hover:fill-purple-500 dark:fill-slate-200 dark:hover:fill-purple-300;
+  }
+}

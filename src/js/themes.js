@@ -1,0 +1,1 @@
+document.querySelector('#slider').onclick = () => document.documentElement.classList.toggle('dark');

@@ -1,0 +1,16 @@
+{
+  "name": "layout1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx tailwindcss -i ./src/css/index.css -o ./public/css/index.css --watch"
+  },
+  "author": "maiklr1ch",
+  "license": "ISC",
+  "devDependencies": {
+    "postcss": "^8.4.21",
+    "tailwindcss": "^3.2.4"
+  }
+}

@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tailwind</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./public/css/index.css">
+</head>
+
+<body class="dark:bg-stone-900">
+  <div class="min-h-screen grid grid-rows-layout">
+    <!-- header -->
+    <header class="w-full border-b-gray-300 border-b-thin dark:border-b-purple-300">
+      <div class="container flex relative justify-between items-center gap-3">
+        <a class="text-2xl text-center sm:text-left uppercase font-bold text-purple-700 dark:text-purple-300"
+          href="#">tailwindCSS</a>
+        <nav id="menu" class="header__menu">
+          <ul class="h-full flex flex-col gap-3 md:flex-row md:justify-between items-start md:items-center p-3 md:p-0">
+            <li><a class="header__link" href="#">Home</a></li>
+            <li><a class="header__link" href="#">About</a></li>
+            <li><a class="header__link" href="#">Contact</a></li>
+            <li class="contents md:flex gap-1"><button
+                class="py-1 px-3 uppercase border-2 border-purple-500 rounded-3xl text-purple-500 hover:text-purple-700 hover:border-purple-700 dark:text-purple-300 dark:border-purple-300 dark:hover:text-purple-400 dark:hover:border-purple-400">Sign
+                In</button>
+              <button
+                class="py-1 px-3 uppercase border-2 border-purple-500 rounded-3xl text-white bg-purple-500 hover:bg-purple-700 hover:border-purple-700 dark:bg-purple-300 dark:text-stone-900 dark:border-purple-300 dark:hover:border-purple-400 dark:hover:bg-purple-400">Sign
+                Up</button></li>
+          </ul>
+        </nav>
+        <button id="menu-button" class="md:hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+        </button>
+      </div>
+    </header>
+    <!-- main -->
+    <main>
+      <div class="container">
+        <div class="w-full flex justify-between items-center">
+          <!-- breadcrumb -->
+          <div class="inline-block cursor-pointer mb-2">
+            <a class="text-gray-5 00 hover:text-purple-500" href="#">
+              <svg class="text-purple-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M11.47 3.84a.75.75 0 011.06 0l8.69 8.69a.75.75 0 101.06-1.06l-8.689-8.69a2.25 2.25 0 00-3.182 0l-8.69 8.69a.75.75 0 001.061 1.06l8.69-8.69z" />
+                <path
+                  d="M12 5.432l8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 01-.75-.75v-4.5a.75.75 0 00-.75-.75h-3a.75.75 0 00-.75.75V21a.75.75 0 01-.75.75H5.625a1.875 1.875 0 01-1.875-1.875v-6.198a2.29 2.29 0 00.091-.086L12 5.43z" />
+              </svg>
+            </a>
+            <svg class="mx-1 text-purple-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+              fill="currentColor">
+              <path fill-rule="evenodd"
+                d="M16.28 11.47a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 01-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 011.06-1.06l7.5 7.5z"
+                clip-rule="evenodd" />
+            </svg>
+            <a class="text-gray-500 hover:text-purple-500 dark:text-slate-200  dark:hover:text-purple-300"
+              href="#">News</a>
+            <svg class="mx-1 text-purple-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+              fill="currentColor">
+              <path fill-rule="evenodd"
+                d="M16.28 11.47a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 01-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 011.06-1.06l7.5 7.5z"
+                clip-rule="evenodd" />
+            </svg>
+            <a class="text-gray-500 hover:text-purple-500 dark:text-slate-200 dark:hover:text-purple-300"
+              href="#">Tech</a>
+          </div>
+          <!-- theme slider -->
+          <div id="slider" class="relative h-8 w-20 rounded-full border-[1px] border-purple-500 dark:border-purple-300 cursor-pointer">
+            <div class="absolute h-6 w-6 rounded-full bg-purple-500 dark:bg-purple-300 top-[3px] left-[3px] dark:left-[49px]"></div>
+            <svg class="absolute opacity-100 dark:opacity-0 w-6 h-6 top-1 right-1 stroke-purple-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+            </svg>
+            <svg class="absolute opacity-0 dark:opacity-100 h-6 w-6 top-1 left-1 dark:stroke-purple-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
+            </svg>                  
+          </div>
+        </div>
+
+        <!-- banners -->
+        <section class="flex flex-col lg:flex-row my-3 max-lg:space-y-1 lg:space-x-1">
+          <a class="relative lg:w-3/4 banner bg-gradient-to-tr from-violet-400 to-indigo-300" href="#">
+            <div class="absolute top-0 left-0 w-full h-full z-10 bg-gradient-to-b from-black/10 to-black/70"></div>
+            <img class="absolute top-0 left-0 z-0 w-full h-full object-cover" src="./public/img/img-1.jpg" alt="">
+            <div class="absolute bottom-3 left-3 z-20">
+              <h2 class="banner__text">Lorem ipsum dolor sit amet.</h2>
+              <div class="flex items-center gap-2 mt-1">
+                <img class="w-10 h-10 rounded-full object-cover" src="https://randomuser.me/api/portraits/men/20.jpg"
+                  alt="author">
+                <div>
+                  <p class="font-semibold text-white">Dan Miles</p>
+                  <time class="text-gray-400 text-sm">23 February</time>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a class="relative lg:w-1/4 banner bg-gradient-to-tl from-emerald-400 to-green-300" href="#">
+            <div class="absolute top-0 left-0 w-full h-full z-10 bg-gradient-to-b from-black/10 to-black/70"></div>
+            <img class="absolute top-0 left-0 w-full h-full object-cover" src="./public/img/img-2.jpg" alt="">
+            <div class="absolute bottom-3 left-3 z-20">
+              <h2 class="banner__text">Consectetur adipisicing elit. Cupiditate,
+                sapiente!</h2>
+              <div class="flex items-center gap-2 mt-1">
+                <img class="w-10 h-10 rounded-full object-cover" src="https://randomuser.me/api/portraits/men/30.jpg"
+                  alt="author">
+                <div>
+                  <p class="font-semibold text-white">Dean Bradley</p>
+                  <time class="text-gray-400 text-sm">14 March</time>
+                </div>
+              </div>
+            </div>
+          </a>
+        </section>
+        <!-- articles -->
+        <div class="flex flex-col lg:flex-row">
+          <!-- news section -->
+          <section class="lg:w-3/4 pr-3">
+            <a class="article" href="#">
+              <img class="rounded-md w-full md:w-48 h-48 object-cover" src="./public/img/img-3.jpg" alt="">
+              <div>
+                <h5 class="font-semibold text-2xl dark:text-white">Nunc eu ipsum ac metus accumsan fermentum vel auctor
+                  odio.</h5>
+                <p class="text-gray-500 mt-6 mb-2 dark:text-slate-200">Lorem ipsum dolor sit amet consectetur
+                  adipisicing elit. Culpa amet
+                  voluptatibus deserunt
+                  veniam fugiat soluta adipisci dolorum itaque necessitatibus eaque. Sint veritatis quaerat
+                  provident necessitatibus expedita dolores, suscipit illum deserunt aliquam quod,
+                  perspiciatis optio. Pariatur eum necessitatibus eveniet facere tenetur et reprehenderit
+                  similique corrupti? Suscipit impedit est itaque blanditiis veniam.</p>
+                <div class="flex items-center gap-2 mt-1">
+                  <img class="w-10 h-10 rounded-full object-cover" src="https://randomuser.me/api/portraits/men/21.jpg"
+                    alt="author">
+                  <div>
+                    <p class="font-semibold dark:text-slate-200">Roland Vasquez</p>
+                    <time class="text-gray-400 text-sm">23 February</time>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a class="article" href="#">
+              <img class="rounded-md w-full md:w-48 h-48 object-cover" src="./public/img/img-4.jpg" alt="">
+              <div>
+                <h5 class="font-semibold text-2xl dark:text-white">Etiam maximus lacus in vehicula consectetur.</h5>
+                <p class="text-gray-500 mt-6 mb-2 dark:text-slate-200">Lorem ipsum dolor sit amet consectetur
+                  adipisicing elit. Culpa amet
+                  voluptatibus deserunt
+                  veniam fugiat soluta adipisci dolorum itaque necessitatibus eaque. Sint veritatis quaerat
+                  provident necessitatibus expedita dolores, suscipit illum deserunt aliquam quod,
+                  perspiciatis optio. Pariatur eum necessitatibus eveniet facere tenetur et reprehenderit
+                  similique corrupti? Suscipit impedit est itaque blanditiis veniam.</p>
+                <div class="flex items-center gap-2 mt-1">
+                  <img class="w-10 h-10 rounded-full object-cover" src="https://randomuser.me/api/portraits/men/22.jpg"
+                    alt="author">
+                  <div>
+                    <p class="font-semibold dark:text-slate-200">Ramon Kennedy</p>
+                    <time class="text-gray-400 text-sm">7 January</time>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a class="article" href="#">
+              <img class="rounded-md w-full md:w-48 h-48 object-cover" src="./public/img/img-5.jpg" alt="">
+              <div>
+                <h5 class="font-semibold text-2xl dark:text-white">Curabitur a sapien semper, vehicula tortor ornare,
+                  semper nisl.</h5>
+                <p class="text-gray-500 mt-6 mb-2 dark:text-slate-200">Lorem ipsum dolor sit amet consectetur
+                  adipisicing elit. Culpa amet
+                  voluptatibus deserunt
+                  veniam fugiat soluta adipisci dolorum itaque necessitatibus eaque. Sint veritatis quaerat
+                  provident necessitatibus expedita dolores, suscipit illum deserunt aliquam quod,
+                  perspiciatis optio. Pariatur eum necessitatibus eveniet facere tenetur et reprehenderit
+                  similique corrupti? Suscipit impedit est itaque blanditiis veniam.</p>
+                <div class="flex items-center gap-2 mt-1">
+                  <img class="w-10 h-10 rounded-full object-cover" src="https://randomuser.me/api/portraits/men/23.jpg"
+                    alt="author">
+                  <div>
+                    <p class="font-semibold dark:text-slate-200">Jack Morgan</p>
+                    <time class="text-gray-400 text-sm">9 September</time>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </section>
+          <hr>
+          <!-- aside -->
+          <div class="mt-3 lg:px-3 lg:border-l-thin lg:border-l-gray-200 lg:dark:border-l-purple-300 lg:w-1/4">
+            <!-- topics -->
+            <div class="mb-4">
+              <h5 class="font-semibold text-2xl dark:text-white">Popular topics</h5>
+              <ul class="my-6 dark:text-slate-200">
+                <li
+                  class="group/topic cursor-pointer px-1 py-2 mb-2 border-y-thin border-y-transparent hover:border-y-gray-300 dark:hover:border-y-purple-300">
+                  <a class="flex items-center" href="#">
+                    <span
+                      class="inline-block w-4 h-4 bg-black dark:bg-purple-300 mr-2 group-hover/topic:bg-gradient-to-tr group-hover/topic:from-emerald-500 group-hover/topic:to-emerald-600"></span>
+                    Vue
+                    <span class="inline-blo   ck ml-auto group-hover/topic:-translate-x-1">23 articles</span>
+                  </a>
+                </li>
+                <li
+                  class="group/topic cursor-pointer px-1 py-2 mb-2 border-y-thin border-y-transparent hover:border-y-gray-300 dark:hover:border-y-purple-300">
+                  <a class="flex items-center" href="#">
+                    <span
+                      class="inline-block w-4 h-4 bg-black dark:bg-purple-300 mr-2 group-hover/topic:bg-gradient-to-tr group-hover/topic:from-blue-400 group-hover/topic:to-blue-600"></span>
+                    React
+                    <span class="inline-block ml-auto group-hover/topic:-translate-x-1">17 articles</span>
+                  </a>
+                </li>
+                <li
+                  class="group/topic cursor-pointer px-1 py-2 mb-2 border-y-thin border-y-transparent hover:border-y-gray-300 dark:hover:border-y-purple-300">
+                  <a class="flex items-center" href="#">
+                    <span
+                      class="inline-block w-4 h-4 bg-black dark:bg-purple-300 mr-2 group-hover/topic:bg-gradient-to-tr group-hover/topic:from-red-400 group-hover/topic:to-red-600"></span>
+                    Angular
+                    <span class="inline-block ml-auto group-hover/topic:-translate-x-1">11 articles</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <!-- subscribe -->
+            <div>
+              <h5 class="font-semibold text-2xl dark:text-white">Subscribe</h5>
+              <p class="text-gray-500 my-6 dark:text-slate-200">Lorem ipsum, dolor sit amet consectetur adipisicing
+                elit. Dolores, voluptate!
+              </p>
+              <div class="flex gap-2 w-full lg:flex-col lg:gap-3">
+                <input
+                  class="w-full p-2 rounded-lg border-2 border-emerald-400 placeholder:text-gray-500 focus:outline-none focus:border-emerald-700 dark:placeholder:text-slate-200 dark:bg-stone-700 dark:text-white"
+                  placeholder="Your E-Mail" type="email">
+                <button
+                  class="uppercase p-2 w-32 rounded-lg bg-emerald-400 text-white font-semibold hover:bg-emerald-600 lg:w-full dark:text-stone-900">Try</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- pagination -->
+        <div class="my-4">
+          <ul class="flex">
+            <li class="pagination-item rounded-l-lg">
+              <a href="#">&#171;</a></li>
+            <li class="pagination-item">
+              <a href="#">1</a></li>
+            <li class="pagination-item pagination-item__selected">
+              <a href="#">2</a></li>
+            <li class="pagination-item">
+              <a href="#">3</a></li>
+            <li class="pagination-item">
+              <a href="#">...</a></li>
+            <li class="pagination-item">
+              <a href="#">10</a></li>
+            <li class="pagination-item rounded-r-lg">
+              <a href="#">&#187;</a></li>
+          </ul>
+        </div>
+      </div>
+    </main>
+    <!-- footer -->
+    <footer class="footer">
+      <div class="container footer__container">
+        <div class="w-full md:w-2/5">
+          <h6 class="footer__heading">Company X</h6>
+          <ul>
+            <li><a class="footer__link" href="#">Team</a></li>
+            <li><a class="footer__link" href="#">About us</a></li>
+          </ul>
+        </div>
+        <div class="w-full md:w-2/5">
+          <h6 class="footer__heading">Content</h6>
+          <ul>
+            <li><a class="footer__link" href="#">Block</a></li>
+            <li><a class="footer__link" href="#">Policy</a></li>
+            <li><a class="footer__link" href="#">Documentaion</a></li>
+          </ul>
+        </div>
+        <div class="w-full md:w-1/5">
+          <h6 class="footer__heading">Contact us</h6>
+          <ul class="flex justify-center md:justify-start">
+            <li class="mr-3">
+              <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                  <path fill-rule="evenodd"
+                    d="M4.804 21.644A6.707 6.707 0 006 21.75a6.721 6.721 0 003.583-1.029c.774.182 1.584.279 2.417.279 5.322 0 9.75-3.97 9.75-9 0-5.03-4.428-9-9.75-9s-9.75 3.97-9.75 9c0 2.409 1.025 4.587 2.674 6.192.232.226.277.428.254.543a3.73 3.73 0 01-.814 1.686.75.75 0 00.44 1.223zM8.25 10.875a1.125 1.125 0 100 2.25 1.125 1.125 0 000-2.25zM10.875 12a1.125 1.125 0 112.25 0 1.125 1.125 0 01-2.25 0zm4.875-1.125a1.125 1.125 0 100 2.25 1.125 1.125 0 000-2.25z"
+                    clip-rule="evenodd" />
+                </svg>
+              </a>
+            </li>
+            <li class="mr-3">
+              <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                  <path fill-rule="evenodd"
+                    d="M17.834 6.166a8.25 8.25 0 100 11.668.75.75 0 011.06 1.06c-3.807 3.808-9.98 3.808-13.788 0-3.808-3.807-3.808-9.98 0-13.788 3.807-3.808 9.98-3.808 13.788 0A9.722 9.722 0 0121.75 12c0 .975-.296 1.887-.809 2.571-.514.685-1.28 1.179-2.191 1.179-.904 0-1.666-.487-2.18-1.164a5.25 5.25 0 11-.82-6.26V8.25a.75.75 0 011.5 0V12c0 .682.208 1.27.509 1.671.3.401.659.579.991.579.332 0 .69-.178.991-.579.3-.4.509-.99.509-1.671a8.222 8.222 0 00-2.416-5.834zM15.75 12a3.75 3.75 0 10-7.5 0 3.75 3.75 0 007.5 0z"
+                    clip-rule="evenodd" />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                  <path fill-rule="evenodd"
+                    d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 006.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 01-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5z"
+                    clip-rule="evenodd" />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="./src/js/menu.js"></script>
+  <script src="./src/js/themes.js"></script>
+</body>
+
+</html>
